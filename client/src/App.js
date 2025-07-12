@@ -5,7 +5,7 @@ import Register from './pages/register';
 import Dashboard from './pages/dashboard';
 
 function App() {
-  const isLoggedIn = localStorage.getItem('userLoginToken');
+  const isLoggedIn = localStorage.getItem('token');
 
   return (
     <Router>

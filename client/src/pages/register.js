@@ -13,7 +13,7 @@ export default function Register() {
         axios.post('http://localhost:3001/api/auth/register', {name,email,password} )
         .then(function (response) {
             // handle success
-            localStorage.setItem('userRegisterToken',response.data.token );
+            localStorage.setItem('token',response.data.token );
         })
         .catch(function (error) {
             // handle error
@@ -22,7 +22,7 @@ export default function Register() {
     }
     return (
         <>
-            <h1> Login Form </h1>
+            <h1> Register Form </h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name:</label>
                 <input required type="text" id="name" name="name" onChange={(e) => setName(e.target.value)} />
